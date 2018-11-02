@@ -1,0 +1,67 @@
+.nav-container {
+  display: flex;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  position: absolute;
+  width: 100vw;
+  background: url("./header_background.jpg");
+  color: whitesmoke;
+  height: 50px;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 19%;
+  padding-left: 2em;
+}
+
+.logo {
+  width: 86%;
+}
+
+.nav-links {
+  padding-right: 4em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.nav-links > .nav-item {
+  font-family: Roboto, sans-serif;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  padding: 1em;
+}
+
+.nav-item:hover {
+  font-weight: 500;
+}
+
+/* For Responsive Header*/
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    padding-top: 3vw;
+  }
+  .nav-logo {
+    padding-left:0;
+    align-self: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .logo {
+      width: 25%;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+  .nav-links .nav-item {
+    padding: 0.6em 3vw;
+    letter-spacing: 1px;
+    font-size: 0.7em;
+  }
+}
