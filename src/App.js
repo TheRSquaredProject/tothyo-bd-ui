@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import TothyoBdContainer from "../src/components/landing/TothyoBdContainer";
+import $ from 'jquery';
 import './App.css';
+import TothyoBdContainer from "../src/components/landing/TothyoBdContainer";
 
 class App extends Component {
   render() {
-    return (
+    return ( 
       <div className="App">
-          <TothyoBdContainer/>
+        <TothyoBdContainer />
       </div>
     );
   }
