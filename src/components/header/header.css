@@ -2,7 +2,6 @@
   display: flex;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  position: absolute;
   width: 100vw;
   background: url("./header_background.jpg");
   color: whitesmoke;
