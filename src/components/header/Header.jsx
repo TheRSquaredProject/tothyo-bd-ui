@@ -4,12 +4,12 @@ import "./header.css";
 
 const Header = () => (
         <nav className="nav-container">
-            <div class="nav-logo">
+            <div className="nav-logo">
                 <a href="./">
-                    <img src={logo} alt="R-Squared Logo" class="logo"/>
+                    <img src={logo} alt="R-Squared Logo" className="logo"/>
                 </a>
             </div>
-            <div class="nav-links">
+            <div className="nav-links">
                 <a href="https://rsquaredproject.org" className="nav-item">R-Squared</a>
                 <a href="https://thersquaredproject.wordpress.com/" className="nav-item">Blog</a>
             </div>
