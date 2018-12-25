@@ -7,9 +7,9 @@ export default class Attendance{
      * - {string} rank
      */
     constructor(data){
-        this.six_to_ten = data.school_attendance_of_6_to_10;
-        this.six_to_eighteen = data.school_attendance_of_6_to_18;
-        this.eleven_to_thirteen = data.school_attendance_of_11_to_13;
-        this.fourteen_to_fifteen = data.school_attendance_of_14_to_15;
+        this.six_to_ten = data.school_attendance_of_6_to_10_years;
+        this.six_to_eighteen = data.school_attendance_of_6_to_18_years;
+        this.eleven_to_thirteen = data.school_attendance_of_11_to_13_years;
+        this.fourteen_to_fifteen = data.school_attendance_of_14_to_15_years;
     }
 }

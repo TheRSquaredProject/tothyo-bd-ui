@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Section from "../section/Section";
 import Dropdown from "../dropdown/Dropdown";
 import Zila from "../../model/Zila";
+import ZilaComp from "../zila/Zila";
 
 import "./tothyobd.css";
 
@@ -11,22 +12,27 @@ class TothyoBdView extends Component {
   constructor(){
     super();
     this.state = {
-      zila: "Dhaka"
+      zila: "DHAKA",
+      zilaData: {}
     }
     this.handleDropdownChange = this.handleDropdownChange.bind(this);
   }
-  createZilaCollection(zilas){
-    return zilas.map(zilaData => new Zila(zilaData));
-  }
-  renderZilas(zilas) {
-    return zilas.map(zila => <div>{zila}</div>);
+  getSelectedZilaInfo(zilas, selectedZila){
+    let zilaData = zilas.filter(zila => zila.location_data.zila === selectedZila);
+
+    return new Zila(zilaData[0]);
   }
 
   handleDropdownChange(event) {
-    console.log(event.target.value);
+    this.setState({
+      zila: event.target.value
+    })
   }
 
   render() {
+    let { zilas } = this.props;
+    let zila = this.getSelectedZilaInfo(zilas, this.state.zila);
+
     return (
       <div className="landing-page">
         <Header />
@@ -35,6 +41,9 @@ class TothyoBdView extends Component {
         </Typography>
         <Section title="Title">
             <Dropdown items={this.props.zilaNames} value={this.state.zila} handleDropdownChange={this.handleDropdownChange}/>
+        </Section>
+        <Section title={this.state.zila}>
+          <ZilaComp zilaName={this.state.zila} zila={zila}/>
         </Section>
       </div>
     );
