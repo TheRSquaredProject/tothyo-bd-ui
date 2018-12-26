@@ -39,7 +39,7 @@ class TothyoBdView extends Component {
         <Typography component="h1" variant="h2" gutterBottom={true}>
             Tothyo Bangladesh
         </Typography>
-        <Section title="Title">
+        <Section title="Select a Zila to view its information.">
             <Dropdown items={this.props.zilaNames} value={this.state.zila} handleDropdownChange={this.handleDropdownChange}/>
         </Section>
        {this.state.zila}
