@@ -1,0 +1,14 @@
+
+.attendance-section {
+    display: flex;
+    flex-direction: column;
+}
+.card-rows{
+    display: flex;
+    flex-direction: row;
+}
+.attendance-card {
+    width: 150px;
+    height: 150px;
+    margin: 10px 10px 15px 10px;
+}

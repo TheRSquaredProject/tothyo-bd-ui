@@ -1,16 +1,13 @@
-import React from "react";
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import React , { Component } from "react";
+import AttendanceData from "../coreData/AttendanceData";
 
-const Zila = (props) => {
-    let {title, zila} = props;
-    return (
-    <div>
-        
-    </div>)
-};
-
-
+class Zila extends Component {
+    render() {
+        let { zila } = this.props;
+        return (<div>
+            <AttendanceData data={zila.attendance_data} />
+        </div>)
+    }
+}
 
 export default Zila;

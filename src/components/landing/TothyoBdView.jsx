@@ -42,9 +42,10 @@ class TothyoBdView extends Component {
         <Section title="Title">
             <Dropdown items={this.props.zilaNames} value={this.state.zila} handleDropdownChange={this.handleDropdownChange}/>
         </Section>
-        <Section title={this.state.zila}>
-          <ZilaComp zilaName={this.state.zila} zila={zila}/>
-        </Section>
+       {this.state.zila}
+       <hr/>
+        <ZilaComp zilaName={this.state.zila} zila={zila}/>
+ 
       </div>
     );
   }
